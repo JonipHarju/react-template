@@ -13,7 +13,8 @@ source: https://vitejs.dev/guide/
 2.
 
 ```
-test
-$
+$ npm install @mui/material @emotion/react @emotion/styled
+
+source : https://mui.com/material-ui/getting-started/installation/
 
 ```
