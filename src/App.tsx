@@ -1,14 +1,19 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Button from "@mui/material/Button";
-
 import "./App.css";
 import Routes from "./Routes";
+import { useDispatch, useSelector } from "react-redux";
+import { increment, decrement } from "./countSlice";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
+  const countState = useSelector(
+    (state: { count: { value: number } }) => state.count.value
+  );
+
+  const dispatch = useDispatch();
   return (
     <>
       <Routes />
@@ -24,10 +29,18 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <Button
+          sx={{ color: "white", backgroundColor: "green" }}
           variant="contained"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => dispatch(increment())}
         >
-          count is {count}
+          count is {countState}
+        </Button>
+        <Button
+          sx={{ color: "black", backgroundColor: "white" }}
+          variant="contained"
+          onClick={() => dispatch(decrement())}
+        >
+          count is {countState}
         </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
