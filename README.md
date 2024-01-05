@@ -45,12 +45,13 @@ $ npm install react-redux
 - Used the above video to test if Redux worked properly.
 ```
 
-## 5. Setup Redux Toolkit
+## 5. Setup Vitest
 
 ```bash
 $ npm install -D vitest
 
 [Source](https://vitest.dev/guide/)
+[Video Guide](https://youtu.be/cchqeWY0Nak?si=M1X3zxv0qMx9nlCY&t=1468)
 
 
 - Copied `vite.config.ts` from [GitHub](https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib-msw/vite.config.ts)
